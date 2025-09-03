@@ -1,18 +1,22 @@
 import React from "react";
 
 /**
- * GamblingTable displays bets in a table format.
+ * GamblingTable component displays a list of bets in a table.
+ * 
  * Props:
- * - bets: array of bet objects
+ * - bets: Array of bet objects (each with fields: date, type, amount, odds, result, notes, id)
  */
 export default function GamblingTable({ bets }) {
+  // If there are no bets, give a friendly message
   if (!bets.length) return <p>No bets yet.</p>;
 
+  // Render a table with headings and one row per bet
   return (
     <div className="table-container">
       <table>
         <thead>
           <tr>
+            {/* Table column headings */}
             <th>Date</th>
             <th>Type</th>
             <th>Amount</th>
@@ -22,6 +26,7 @@ export default function GamblingTable({ bets }) {
           </tr>
         </thead>
         <tbody>
+          {/* Loop through each bet and make a row */}
           {bets.map((bet) => (
             <tr key={bet.id}>
               <td>{bet.date}</td>
