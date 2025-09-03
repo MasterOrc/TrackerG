@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Gambling Tracker (React + Firebase)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple, beginner-friendly web app to track your gambling stats.  
+Built with **React** and **Firebase** (Firestore + Auth), it's secure, mobile-friendly, and accessible from any device.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 How to use this project
 
-### `npm start`
+### 1. Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Node.js & npm](https://nodejs.org/) (LTS version recommended)
+- A free [Firebase](https://firebase.google.com/) account
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+### 2. Firebase Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Go to [Firebase Console](https://console.firebase.google.com/) and create a new project.
+2. Go to **Build → Authentication** and enable **Email/Password**.
+3. Go to **Build → Firestore Database**, click **Create database**, and start in test mode (for now).
+4. Go to **Project Settings** (gear icon) → **Your apps** → click web icon (`</>`) and register your app.
+5. Copy your **Firebase config**.  
+   You will paste this into `src/firebase.js`.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Local Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/MasterOrc/TrackerG.git
+cd TrackerG
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### 4. Add Your Firebase Credentials
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Open `src/firebase.js` and **replace the config object** with your own from Firebase Console.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 5. Start the app
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 6. Deploy (Optional)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- You can deploy for free with [Firebase Hosting](https://firebase.google.com/docs/hosting).
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📝 Features
 
-### Analyzing the Bundle Size
+- User Sign Up / Login
+- Add new gambling record (date, type, amount, odds, result, notes)
+- See all bets in a table
+- Dashboard with stats (total bets, net profit/loss)
+- Mobile-friendly
+- All code is commented for learning
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📁 File Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+TrackerG/
+├── public/
+├── src/
+│   ├── components/
+│   ├── firebase.js
+│   ├── App.js
+│   ├── index.js
+│   └── styles.css
+├── package.json
+└── README.md
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy! If you need help or want to add features, open an issue or ask!
